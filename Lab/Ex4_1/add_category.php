@@ -4,7 +4,7 @@ $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'category_name');
 
 // Validate inputs
-if ($category_name == null) {
+if ($category_name == false || $category_name == null) {
     $error = "Invalid product data. Check all fields and try again.";
     include('error.php');
 } else {
