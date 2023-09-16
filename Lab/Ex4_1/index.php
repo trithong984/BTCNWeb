@@ -66,7 +66,8 @@ $statement3->closeCursor();
             </li>
             <?php endforeach; ?>
         </ul>
-        </nav>          
+        </nav>  
+        <p><a href="add_product_form.php">Add Product</a></p>        
     </aside>
 
     <section>
@@ -91,13 +92,6 @@ $statement3->closeCursor();
                     <input type="hidden" name="category_id"
                            value="<?php echo $product['categoryID']; ?>">
                     <input type="submit" value="Delete">
-                </form></td>
-                <td><form action="update.php" method="post">
-                    <input type="hidden" name="product_id"
-                           value="<?php echo $product['productID']; ?>">
-                    <input type="hidden" name="category_id"
-                           value="<?php echo $product['categoryID']; ?>">
-                    <input type="submit" value="update">
                 </form></td>
             </tr>
             <?php endforeach; ?>
