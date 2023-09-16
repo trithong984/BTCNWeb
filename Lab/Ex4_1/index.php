@@ -67,7 +67,7 @@ $statement3->closeCursor();
             <?php endforeach; ?>
         </ul>
         </nav>  
-        <p><a href="add_product_form.php">Add Product</a></p>        
+        <p><a href="add_category_form.php">Add Product</a></p>        
     </aside>
 
     <section>
