@@ -3,20 +3,23 @@ require_once('connect_db.php');
 
 // Get IDs
 $product_id = filter_input(INPUT_POST, 'product_id', FILTER_VALIDATE_INT);
-$category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 
-// Delete the product from the database
-if ($product_id != false && $category_id != false) {
-    $query = 'UPDATE products WHERE productID = :product_id';
+// Check if the product_id is valid
+if ($product_id !== false) {
+    // Update the product in the database
+    $query = 'UPDATE products SET column_name = :new_value WHERE productID = :product_id'; // Replace 'column_name' and ':new_value' with actual column name and new value
     $statement = $db->prepare($query);
-    $statement->bindValue(':product_id', $product_id);
-    $success = $statement->execute();
-    $statement->closeCursor();    
+    $statement->bindValue(':product_id', $product_id, PDO::PARAM_INT); // Use PDO::PARAM_INT for integer values
+    // Bind the new value if needed
+    // $statement->bindValue(':new_value', $new_value); // Uncomment and replace ':new_value' with the actual new value
 
-    // $sql = "UPDATE products SET code='589' WHERE id=2";
-    // $stmt = $conn->prepare($sql);
-    // $stmt->execute();
+    $success = $statement->execute();
+    $statement->closeCursor();
+} else {
+    // Handle the case where product_id is not valid
+    echo "Invalid product ID";
 }
 
 // Display the Product List page
 include('index.php');
+?>
