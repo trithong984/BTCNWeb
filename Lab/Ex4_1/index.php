@@ -91,7 +91,13 @@ $statement3->closeCursor();
                     <input type="hidden" name="category_id"
                            value="<?php echo $product['categoryID']; ?>">
                     <input type="submit" value="Delete">
-                    <input type="submit" value="update">
+                </form></td>
+                <td><form action="update.php" method="post">
+                    <input type="hidden" name="product_id"
+                           value="<?php echo $product['productID']; ?>">
+                    <input type="hidden" name="category_id"
+                           value="<?php echo $product['categoryID']; ?>">
+                    <input type="submit" value="updateee">
                 </form></td>
             </tr>
             <?php endforeach; ?>
