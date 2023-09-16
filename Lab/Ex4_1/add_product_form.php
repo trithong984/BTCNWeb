@@ -1,5 +1,5 @@
 <?php
-require('connect_db.php');
+require('database.php');
 $query = 'SELECT *
           FROM categories
           ORDER BY categoryID';

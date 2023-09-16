@@ -1,5 +1,5 @@
 <?php
-require_once('connect_db.php');
+require_once('database.php');
 
 // Get IDs
 $product_id = filter_input(INPUT_POST, 'product_id', FILTER_VALIDATE_INT);
