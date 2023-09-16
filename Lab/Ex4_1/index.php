@@ -44,13 +44,13 @@ $statement3->closeCursor();
 
 <!-- the head section -->
 <head>
-    <title>My Guitar Shopppppp</title>
+    <title>My Guitar Shop</title>
     <link rel="stylesheet" type="text/css" href="main.css" />
 </head>
 
 <!-- the body section -->
 <body>
-<header><h1>Product Managerrrrrrr</h1></header>
+<header><h1>Product Manager</h1></header>
 <main>
     <h1>Product List</h1>
 
@@ -91,6 +91,7 @@ $statement3->closeCursor();
                     <input type="hidden" name="category_id"
                            value="<?php echo $product['categoryID']; ?>">
                     <input type="submit" value="Delete">
+                    <input type="submit" value="update">
                 </form></td>
             </tr>
             <?php endforeach; ?>
