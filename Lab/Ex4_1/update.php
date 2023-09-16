@@ -7,7 +7,7 @@ $product_id = filter_input(INPUT_POST, 'product_id', FILTER_VALIDATE_INT);
 // Check if the product_id is valid
 if ($product_id !== false) {
     // Update the product in the database
-    $query = 'UPDATE products SET column_name = :new_value WHERE productID = :product_id'; // Replace 'column_name' and ':new_value' with actual column name and new value
+    $query = 'UPDATE products SET column_name = :new_value WHERE productID = :product_id'; // Replace 'column_name' with the actual column name you want to update
     $statement = $db->prepare($query);
     $statement->bindValue(':product_id', $product_id, PDO::PARAM_INT); // Use PDO::PARAM_INT for integer values
     // Bind the new value if needed
