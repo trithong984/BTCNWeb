@@ -16,6 +16,9 @@
         <?php endforeach; ?>
         </ul>
         </nav>
+        <p class="last_paragraph">
+            <a href="?action=show_add_form_category">Add Category</a>
+        </p>
     </aside>
     <section>
         <!-- display a table of products -->

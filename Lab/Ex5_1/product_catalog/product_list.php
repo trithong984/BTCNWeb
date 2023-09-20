@@ -15,7 +15,6 @@
         </ul>
         </nav>
     </aside>
-            <a href="?action=show_add_form_category">Add Category</a>
     <section>
         <h1><?php echo $category_name; ?></h1>
         <nav>
