@@ -15,9 +15,9 @@
         </ul>
         </nav>
     </aside>
-    <p class="last_paragraph">
+    <p class="last_paragraph1">
             <a href="?action=show_add_form_category">Add Category</a>
-        </p>
+    </p>
     <section>
         <h1><?php echo $category_name; ?></h1>
         <nav>
