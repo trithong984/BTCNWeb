@@ -17,7 +17,7 @@
         </ul>
         </nav>
     </aside>
-    <form>
+    <form action="product_manager.php">
         <input type="hidden" name="action" value="add_category">
         <input type="text" name="code" />
         <label>&nbsp;</label>
