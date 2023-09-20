@@ -51,5 +51,35 @@ if ($action == 'list_products') {
         add_product($category_id, $code, $name, $price);
         header("Location: .?category_id=$category_id");
     }
+} else if ($action == 'add_category') {
+    $category_name = filter_input(INPUT_POST, 'category_name', 
+            FILTER_VALIDATE_INT);
+    $category_id = filter_input(INPUT_POST, 'category_id', 
+            FILTER_VALIDATE_INT);
+    if ($category_id == NULL || $category_id == FALSE ||
+            $category_name == NULL || $category_name == FALSE) {
+        $error = "Missing or incorrect product id or category id.";
+        include('../errors/error.php');
+    } else { 
+        delete_product($product_id);
+        header("Location: .?category_id=$category_id");
+    }
+} else if ($action == 'show_add_form') {
+    $categories = get_categories();
+    include('product_add.php');    
+} else if ($action == 'add_product') {
+    $category_id = filter_input(INPUT_POST, 'category_id', 
+            FILTER_VALIDATE_INT);
+    $code = filter_input(INPUT_POST, 'code');
+    $name = filter_input(INPUT_POST, 'name');
+    $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+    if ($category_id == NULL || $category_id == FALSE || $code == NULL || 
+            $name == NULL || $price == NULL || $price == FALSE) {
+        $error = "Invalid product data. Check all fields and try again.";
+        include('../errors/error.php');
+    } else { 
+        add_product($category_id, $code, $name, $price);
+        header("Location: .?category_id=$category_id");
+    }
 }    
 ?>

@@ -36,4 +36,13 @@ function add_category($category_id, $category_name) {
     $statement->execute();
     $statement->closeCursor();
 }
+function delete_category($product_id) {
+    global $db;
+    $query = 'DELETE FROM categories
+              WHERE categoryID = :categoryID';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':product_id', $product_id);
+    $statement->execute();
+    $statement->closeCursor();
+}
 ?>

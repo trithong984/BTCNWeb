@@ -17,12 +17,6 @@
         </ul>
         </nav>
     </aside>
-    <form action="product_manager.php">
-        <input type="text" name="category_name" />
-        <label>&nbsp;</label>
-        <input type="submit" value="Add Product" />
-        <br>
-    </form>
     <section>
         <!-- display a table of products -->
         <h2><?php echo $category_name; ?></h2>
