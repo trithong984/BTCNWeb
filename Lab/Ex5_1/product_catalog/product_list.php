@@ -15,7 +15,7 @@
         </ul>
         </nav>
         <p class="last_paragraph">
-            <a href="?action=show_add_form">Add Product</a>
+            <a href="?action=show_add_form_category">Add Category</a>
         </p>
     </aside>
     
