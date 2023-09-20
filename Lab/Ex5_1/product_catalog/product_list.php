@@ -14,11 +14,10 @@
             <?php endforeach; ?>
         </ul>
         </nav>
-        <p class="last_paragraph">
+    </aside>
+    <p class="last_paragraph">
             <a href="?action=show_add_form_category">Add Category</a>
         </p>
-    </aside>
-    
     <section>
         <h1><?php echo $category_name; ?></h1>
         <nav>
