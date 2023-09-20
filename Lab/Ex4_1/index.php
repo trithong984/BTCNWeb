@@ -26,6 +26,8 @@ $statement = $db->prepare($query);
 $statement->execute();
 $categories = $statement->fetchAll();
 $statement->closeCursor();
+
+
 $queryProducts = 'SELECT * FROM products
                   WHERE categoryID = :category_id
                   ORDER BY productID';

@@ -8,7 +8,7 @@ $statement->execute();
 $categories = $statement->fetchAll();
 $statement->closeCursor();
 ?>
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
 
 <head>
