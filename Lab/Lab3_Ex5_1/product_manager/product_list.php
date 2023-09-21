@@ -3,7 +3,6 @@
     <h1>Product List</h1>
 
     <aside>
-        <!-- display a list of categories -->
         <h2>Categories</h2>
         <nav>
         <ul>
@@ -17,7 +16,7 @@
         </ul>
         </nav>
         <p class="last_paragraph">
-            <a href="?action=show_add_form_category">Add Category</a>
+            <a href="?action=list_categories">View List Category</a>
         </p>
     </aside>
     <section>

@@ -24,24 +24,24 @@ function get_category_name($category_id) {
 }
 
 
-function add_category($category_id, $category_name) {
+function add_category($category_name) {
     global $db;
     $query = 'INSERT INTO categories
-                 (categoryID, categoryName)
+                 (categoryName)
               VALUES
-                 (:category_id, :category_name)';
+                 (:category_name)';
     $statement = $db->prepare($query);
-    $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':category_name', $category_name);
     $statement->execute();
     $statement->closeCursor();
 }
-function delete_category($product_id) {
+
+function delete_category($category_id) {
     global $db;
     $query = 'DELETE FROM categories
-              WHERE categoryID = :categoryID';
+              WHERE categoryID = :category_id';
     $statement = $db->prepare($query);
-    $statement->bindValue(':product_id', $product_id);
+    $statement->bindValue(':category_id', $category_id);
     $statement->execute();
     $statement->closeCursor();
 }
