@@ -2,6 +2,7 @@
 $mang_so = array();
 $mang_duy_nhat = array();
 $so_lan = array();
+$mang_so_f='';
 
 if(isset($_POST['nhap_mang'])){
     $mang_so = explode(",", $_POST['nhap_mang']);
@@ -19,7 +20,10 @@ function mang_duy_nhat($mang_so){
     echo implode(", ", $mang_so);
     }
     }
-    
+    foreach ($mang_so as $ma) {
+        $mang_so_f .= $ma . ',';
+    }
+    $mang_so_f = substr($mang_so_f, 0, strlen($mang_so_f)-1);
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,8 +65,8 @@ function mang_duy_nhat($mang_so){
             <tbody>
                 <tr>
                     <td>Mảng:</td>
-                    <td><input type="text" name="nhap_mang" value="<?php foreach($mang_so as $ma){ echo $ma .',';}
-?>" /></td>
+                    <td><input type="text" name="nhap_mang" value="<?php echo $mang_so_f; ?>"
+?></td>
                 </tr>
                 <tr>
                     <td>Số lần xuất hiện:</td>
