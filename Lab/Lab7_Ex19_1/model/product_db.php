@@ -73,7 +73,6 @@ function add_product($category_id, $code, $name, $description,
         $statement->execute();
         $statement->closeCursor();
 
-        // Get the last product ID that was automatically generated
         $product_id = $db->lastInsertId();
         return $product_id;
     } catch (PDOException $e) {

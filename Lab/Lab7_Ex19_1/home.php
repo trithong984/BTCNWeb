@@ -12,5 +12,5 @@
 
     <h1>Insert Message</h1>
     <p> <?php echo $insert_message; ?></p>
-</main><!-- end content -->
+</main>
 <?php include 'view/footer.php'; ?>
